@@ -1,0 +1,23 @@
+<div class="row">
+  <!-- Con "col-md-3" decimos que para pantallas medianas, divida el div en columnas de 3 posiciones -->
+  <!-- Con "col-sm-6" decimos que para pantallas muy pequeñas, divida el div en columnas de 6 posiciones -->
+  <!-- Uso un *ngFor para que recorra el listado de gifs -->
+  <div *ngFor="let gif of gifs" class="col-md-3 col-sm-6">
+    <div class="card mb-2 text-center bg-dark">
+      <!-- Cargo la imagen -->
+      <img
+        [src]="gif.images.downsized_medium.url"
+        [alt]="gif.title"
+        class="card-img-top">
+
+      <div class="card-body text-white">
+        <p class="card-text">
+          {{ gif.title }}
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
